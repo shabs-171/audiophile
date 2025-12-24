@@ -1,0 +1,343 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .featured-section {
+    grid-template-areas:
+      "a a"
+      "b b"
+      "c d";
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-section>div {
+    @apply rounded-lg;
+  }
+
+  .featured-section>div:nth-child(1) {
+    grid-area: a;
+  }
+
+  .featured-section>div:nth-child(2) {
+    grid-area: b;
+  }
+
+  .featured-section>div:nth-child(3) {
+    grid-area: c;
+  }
+
+  .featured-section>div:nth-child(4) {
+    grid-area: d;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-chineseBlack;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-style: normal;
+    @apply font-sans;
+    @apply text-antiFlashWhite;
+  }
+
+  h1 {
+    font-size: clamp(2.25rem, 2.0714rem + 0.8929vw, 3.5rem);
+    line-height: 3.625rem;
+    letter-spacing: 0.125rem;
+  }
+
+  h2 {
+    font-size: clamp(1.75rem, 1.6429rem + 0.5357vw, 2.5rem);
+    line-height: 2.75rem;
+    letter-spacing: 0.08931rem;
+    line-height: 2.25rem;
+    letter-spacing: 0.07144rem;
+  }
+
+  h3 {
+    font-size: clamp(1.5rem, 1.4286rem + 0.3571vw, 2rem);
+    line-height: 2.25rem;
+    letter-spacing: 0.07144rem;
+  }
+
+  h4 {
+    font-size: 1.75rem;
+    line-height: normal;
+    letter-spacing: 0.125rem;
+  }
+
+  p {
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5625rem;
+    font-style: normal;
+    @apply text-antiFlashWhite;
+  }
+
+  p,
+  a,
+  span {
+    @apply font-sans;
+  }
+
+  .overhang,
+  .subtitle {
+    text-transform: uppercase;
+    font-style: normal;
+    @apply text-jasperOrange;
+  }
+
+  .overhang {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.625rem;
+  }
+
+  .subtitle {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    line-height: 1.5625rem;
+    letter-spacing: 0.05806rem;
+  }
+
+  .display-font {
+    @apply font-display;
+    font-size: clamp(4.5rem, 2.9107rem + 7.9464vw, 15.625rem);
+    @apply leading-none;
+    @apply font-medium;
+  }
+
+  .form-label {
+    @apply font-sans;
+    @apply text-antiFlashWhite;
+    @apply uppercase;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700 !important;
+    line-height: normal;
+    letter-spacing: 0.05806rem;
+    margin: 0 !important;
+  }
+
+  .menu {
+    @apply text-antiFlashWhite;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5625rem;
+    letter-spacing: 0.125rem;
+    text-transform: uppercase;
+  }
+
+  .cart-remove-button {
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 500;
+    color: #808080;
+    line-height: 1.5625rem;
+    text-decoration-line: underline;
+  }
+
+  .category {
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.06694rem;
+    text-transform: uppercase;
+  }
+
+  .quantity {
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    @apply text-antiFlashWhite;
+  }
+
+  .quantity-button {
+    @apply text-antiFlashWhite;
+    font-size: 0.8125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+    padding: 0;
+  }
+
+  .cart-checkout-button {
+    @apply text-black;
+    @apply bg-jasperOrange;
+    font-size: 0.8125rem;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: 0.0625rem;
+    text-transform: uppercase;
+  }
+
+  .cart-product-title {
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5625rem;
+  }
+
+  .cart-product-price {
+    color: #808080;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.5625rem;
+  }
+
+  .cart-total {
+    @apply text-gray;
+    font-size: 1.125rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  .cart-total-title {
+    @apply text-antiFlashWhite;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5625rem;
+    text-transform: uppercase;
+  }
+
+  .hero-overhang {
+    @apply text-gray;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.625rem;
+    text-transform: uppercase;
+  }
+
+  .hero-text {
+    @apply text-gray;
+    font-size: 0.9375rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.5625rem;
+  }
+
+  img {
+    @apply rounded-lg;
+    margin: 0 !important;
+  }
+
+  .primary-link {
+    @apply bg-jasperOrange;
+  }
+
+  .primary-link:hover {
+    @apply bg-black;
+    @apply text-jasperOrange;
+  }
+
+  .secondary-link {
+    @apply bg-antiFlashWhite;
+  }
+
+  .secondary-link:hover {
+    @apply bg-black;
+    @apply text-jasperOrange;
+  }
+
+  .shop-link {
+    @apply border;
+    @apply border-antiFlashWhite;
+    @apply text-antiFlashWhite;
+  }
+
+  .shop-link:hover {
+    @apply border-jasperOrange;
+    @apply text-jasperOrange;
+  }
+
+  .error-message {
+    @apply uppercase;
+    @apply text-red;
+    @apply font-bold;
+  }
+
+  .radio-group {
+    display: flex !important;
+  }
+
+  .radio-group-item {
+    background-color: white;
+    @apply border;
+    @apply border-jasperOrange;
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+  }
+
+  .radio-group-item:focus {
+    @apply border;
+    @apply border-jasperOrange;
+  }
+
+  .radio-group-indicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
+  .radio-group-indicator::after {
+    content: "";
+    display: none;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    @apply bg-jasperOrange;
+  }
+
+  .radio-group-indicator[data-state="checked"]::after {
+    display: block;
+  }
+
+  .radio-group-indicator[data-state="checked"]>svg,
+  .radio-group-indicator[data-state="checked"]>span {
+    display: none;
+  }
+}
+
+/* * {
+  outline: 0.0625rem solid red;
+} */
+
+.cart svg {
+  color: #f1f1f1;
+}
+
+.icon path {
+  @apply transition;
+}
+
+.icon path:hover {
+  fill: #d87d4a;
+  @apply transition;
+}
